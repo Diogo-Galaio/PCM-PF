@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head lang="pt">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin ="anonymous">
+		<link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@300&display=swap" rel="stylesheet">
+
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/main.css">
+	
+		<!--jQuery first, then Popper.js, then Bootstrap JS-->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="https://kit.fontawesome.com/89c4dad903.js" crossorigin="anonymous"></script>
+
+		<script src="js/form_manager.js"></script>
+	</head>
+<title>Questionário</title>
+<body class="bg-dark text-light">
+<header id="header">
+    <h1 class="d-flex p-4 m-0 text-light" id="text">Caracterização</h1>
+</header>
+<section id="dadospessoais" class="card p-4">
+    <form name="fdpessoais" method="GET" onsubmit="get_form1()" action="tarefas.html">
+        <fieldset>
+            <article id="dp1" >
+                <h4>Qual é a sua idade?*</h4>
+                <div class="p-3">
+                    <input id="name1" type="radio" name="idade" value="menor18">
+                    <label for="name1"><18</label>
+
+                    <input id="name1" type="radio" name="idade" value="18-25">
+                    <label for="name1">18-25</label>
+
+                    <input id="name1" type="radio" name="idade" value="26-33">
+                    <label for="name1">26-33</label>
+
+                    <input id="name1" type="radio" name="idade" value="34-40">
+                    <label for="name1">34-40</label>
+
+                    <input id="name1" type="radio" name="idade" value="maior40" required>
+                    <label for="name1">>40</label>
+                </div>
+            </article>
+            <div class="p-3"></div>
+            <article id="dp2">
+                <h4>Género:*</h4>
+                <div class="p-3">
+                    <input id = "masc" type="radio" name="sexo" value="masculino">
+                    <label for = "masc"> Masculino </label>
+        
+                    <input id = "fem" type="radio" name="sexo" value="feminino" required>
+                    <label for = "fem"> Feminino </label>
+                </div>
+            </article>
+            <div class="p-3"></div>
+            <article id="dp3">
+                <h4>Com que frequência usa a Internet?</h4>
+                <div class="p-3">
+                    <select name="frequencia">
+                        <option value="">Escolha uma opção..</option>
+                        <option value="mais2h/dia">Mais do que 2 horas/dia </option>
+                        <option value="menos2h/dia">Menos do que 2 horas/dia </option>
+                        <option value="varias">Várias vezes por semana </option>
+                        <option value="semanal">Semanalmente </option>
+                        <option value="mensal">Mensalmente </option>
+                    </select>
+                </div>
+            </article>
+            <div class="p-3"></div>
+            <article id="dp4">
+                <h4>
+                    Indique, por ordem de preferência, os Web browsers que mais utiliza. Deve indicar 3.
+                    Utilize valores de 1 a 3, sendo 1 o mais preferido e 3 o menos.** 
+                </h4>
+                <div class="p-3">
+                    <label for="primeiro" >1:</label>
+                    <select name="first" id="primeiro" onchange="checkBrowser(this)" required>
+                        <option value="">Escolha uma opção..</option>
+                        <option value="Chrome">Chrome</option>
+                        <option value="Edge">Edge</option>
+                        <option value="Firefox">Firefox</option>
+                        <option value="Internet Explorer">Internet Explorer</option>
+                        <option value="Opera">Opera</option>
+                        <option value="Safari">Safari</option>
+                    </select>
+
+                    <label for = "segundo" class="pl-5">2:</label >
+                    <select name="second" id="segundo" onchange="checkBrowser(this)" required>
+                        <option value="">Escolha uma opção..</option>
+                        <option value="Chrome">Chrome</option>
+                        <option value="Edge">Edge</option>
+                        <option value="Firefox">Firefox</option>
+                        <option value="Internet Explorer">Internet Explorer</option>
+                        <option value="Opera">Opera</option>
+                        <option value="Safari">Safari</option>
+                    </select>
+
+                    <label for = "terceiro" class="pl-5">3:</label >
+                    <select name="third" id="terceiro" onchange="checkBrowser(this)" required>
+                        <option value="">Escolha uma opção..</option>
+                        <option value="Chrome">Chrome</option>
+                        <option value="Edge">Edge</option>
+                        <option value="Firefox">Firefox</option>
+                        <option value="Internet Explorer">Internet Explorer</option>
+                        <option value="Opera">Opera</option>
+                        <option value="Safari">Safari</option>
+                    </select>
+                </div>
+            </article>
+            <div class="p-3"></div>
+            <article id="dp5">
+                <h4>Utiliza outros websites ou aplicações para procurar imagens/fotografias digitais?</h4>
+                <div class="p-3">
+                    <input id = "sim" type="radio" name="sim/nao" value="Sim" onclick="Write_Text()">
+                    <label for = "sim"> Sim </label>
+
+                    <input id = "nao" type="radio" name="sim/nao" value="Não" onclick="Write_Text()">
+                    <label for = "nao"> Não </label>
+
+                    <br>
+                    <label for="quais">Quais:</label>
+                    <input id = "quais" type="text" name="quais">
+                </div>
+            </article>
+        </fieldset>
+        <div class="p-3"></div>
+        <div id="next">
+            <button type="button">
+                <input id="sub" type="submit" name="submit" value="Next" class="btn btn-light">
+            </button>
+        </div>
+        <div class="p-2"></div>
+    </form>
+</section>
+<script>
+    Write_Text();
+</script>
+</body>
+<footer>
+    <ul class="nav footer">
+        <li class="nav-item">
+          <a class="nav-link faIcon" href="#"><i class="fab fa-facebook-f"></i></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link faIcon" href="#"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link faIcon" href="#"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link faIcon" href="#"><i class="fab fa-linkedin-in"></i></a>
+        </li>
+        <a class="nav-item ml-auto">All rights reserved</a>            
+      </ul>
+</footer>
+</html>

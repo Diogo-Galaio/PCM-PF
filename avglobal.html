@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head lang="pt">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin ="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+     <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--jQuery first, then Popper.js, then Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/89c4dad903.js" crossorigin="anonymous"></script>
+
+    <script src="js/form_manager.js"></script>
+</head>
+<title>Questionário</title>
+<body class="bg-dark text-light">
+<header id="header" class="pb-3">
+    <h1>Avaliação Global</h1>
+    <p>
+        Por favor, responda às seguintes questões para avaliar a sua experiência de utilização e a
+        usabilidade do website.
+    </p>
+</header>
+<section id="fava" class="card p-4 m-0 bg-dark">
+    <form name="fava" method="GET" onsubmit="get_form3()" action="respostas.html" >
+        <fieldset>
+            <div id="cartao_avaliacao" class="card p-3">
+                <h2>
+                    <b>
+                        Experiência de utilização
+                    </b>
+                </h2>
+                <h4>
+                    <b>
+                        16 - Para cada par de adjetivos, selecione a opção que melhor descreve a sua experiência de
+                        utilização deste website.
+                    </b>
+                </h4>
+            
+                <div class="slidecontainer">
+                    <label for="slider1" class="pr-3 mr-1">Fantástica</label>
+                    <input type="range" min="1" max="7" value="1"  name ="slider1" id="slider1" class="slider" >
+                    <label for="slider1" class="pl-1">Horrível</label>
+                </div>
+                <div class="slidecontainer">
+                    <label for="slider2" class="pr-1 mr-1">Estimulante</label>
+                    <input type="range" min="1" max="7" value="1"  name ="slider2" id="slider2" class="slider">
+                    <label for="slider2" class="pl-1">Aborrecida</label>
+                </div>
+                <div class="slidecontainer">
+                    <label for="slider3" class="pr-1 mr-1">Gratificante</label>
+                    <input type="range" min="1" max="7" value="1"  name ="slider3" id="slider3" class="slider">
+                    <label for="slider3" class="pl-1">Frustrante</label>
+                </div>
+                <div class="slidecontainer">
+                    <label for="slider4" class="pr-5 mr-2">Fácil</label>
+                    <input type="range" min="1" max="7" value="1"  name ="slider4" id="slider4" class="slider">
+                    <label for="slider4" class="pl-1" >Difícil</label>
+                </div>
+            </div>
+            <div class="p-3"></div> 
+            <div id="cartao_avaliacao" class="card p-3">
+                <h1>
+                    <b>
+                        SUS - System Usability Scale
+                    </b>
+                </h1>
+                <h2>
+                    <b>
+                        Para recolher as respostas é utilizada uma escala do tipo Likert com 5 opções de escolha (1
+                        significa “Discorda completamente” e 5 significa “Concorda completamente”).
+                    </b>
+                </h2>
+                <article id="ag1" class="p-3">
+                    <h4>
+                        <b>
+                            17 - Acho que gostaria de utilizar este website com frequência. *
+                        </b>
+                    </h4>
+                    <div class="pt-2 pl-4">
+                        <label for = "ag1primeira">1.</label>   
+                        <input id="ag1primeira" type="radio" name="a1" value="1"> 
+                        <label for = "ag1segunda">2.</label>   
+                        <input id="ag1segunda" type="radio" name="a1" value="2">
+                        <label for = "ag1terceira">3.</label>   
+                        <input id="ag1terceira" type="radio" name="a1" value="3">   
+                        <label for = "ag1quarta">4.</label>                   
+                        <input id="ag1quarta" type="radio" name="a1" value="4">   
+                        <label for = "ag1quinta">5.</label>    
+                        <input id="ag1quinta" type="radio" name="a1" value="5" required>
+                    </div>
+                </article>
+            
+            <div class="p-3"></div>
+            <article id="ag2" class=" p-3">
+                <h4>
+                    <b>
+                        18 - Considerei o website mais complexo do que necessário. *
+                    </b>
+                </h4>
+                <div class="pt-2 pl-4">
+                    <label for = "ag2primeira">1.</label>  
+                    <input id="ag2primeira" type="radio" name="a2" value="1"> 
+                    <label for = "ag2segunda">2.</label>
+                    <input id="ag2segunda" type="radio" name="a2" value="2">
+                    <label for = "ag2terceira">3.</label>
+                    <input id="ag2terceira" type="radio" name="a2" value="3">    
+                    <label for = "ag2quarta">4.</label>               
+                    <input id="ag2quarta" type="radio" name="a2" value="4">    
+                    <label for = "ag2quinta">5.</label>
+                    <input id="ag2quinta" type="radio" name="a2" value="5" required>
+                </div>
+            </article>
+            <div class="p-3"></div>
+            <article id="ag3" class=" p-3">
+                <h4>
+                    <b>
+                        19 - Achei o website fácil de utilizar. *
+                    </b>
+                </h4>
+                <div class="pt-2 pl-4">
+                    <label for = "ag3primeira">1.</label>  
+                    <input id="ag3primeira" type="radio" name="a3" value="1"> 
+                    <label for = "ag3segunda">2.</label>  
+                    <input id="ag3segunda" type="radio" name="a3" value="2">
+                    <label for = "ag3terceira">3.</label>  
+                    <input id="ag3terceira" type="radio" name="a3" value="3">    
+                    <label for = "ag3quarta">4.</label>                 
+                    <input id="ag3quarta" type="radio" name="a3" value="4">    
+                    <label for = "ag3quinta">5.</label>  
+                    <input id="ag3quinta" type="radio" name="a3" value="5" required>
+                </div>
+            </article>
+            <div class="p-3" ></div>
+            <article id="ag4"class=" p-3">
+                <h4>
+                    <b>
+                        20 - Acho que necessitaria de ajuda de um técnico para conseguir utilizar este website. *
+                    </b>
+                </h4>
+                <div class="pt-2 pl-4">
+                    <label for = "ag4primeira">1.</label>
+                    <input id="ag4primeira" type="radio" name="a4" value="1"> 
+                    <label for = "ag4segunda">2.</label>
+                    <input id="ag4segunda" type="radio" name="a4" value="2">
+                    <label for = "ag4terceira">3.</label>
+                    <input id="ag4terceira" type="radio" name="a4" value="3">     
+                    <label for = "ag4quarta">4.</label>              
+                    <input id="ag4quarta" type="radio" name="a4" value="4">    
+                    <label for = "ag4quinta">5.</label>
+                    <input id="ag4quinta" type="radio" name="a4" value="5" required>
+                </div>
+            </article>
+            <div class="p-3"></div>
+            <article id="ag5" class=" p-3">
+                <h4>
+                    <b>
+                        21 - Considerei que as várias funcionalidades deste website estavam bem integradas. *
+                    </b>
+                </h4>
+                <div class="pt-2 pl-4">
+                    <label for = "ag5primeira">1.</label>
+                    <input id="ag5primeira" type="radio" name="a5" value="1"> 
+                    <label for = "ag5segunda">2.</label>
+                    <input id="ag5segunda" type="radio" name="a5" value="2">
+                    <label for = "ag5terceira">3.</label>
+                    <input id="ag5terceira" type="radio" name="a5" value="3">   
+                    <label for = "ag5quarta">4.</label>                
+                    <input id="ag5quarta" type="radio" name="a5" value="4">  
+                    <label for = "ag5quinta">5.</label>  
+                    <input id="ag5quinta" type="radio" name="a5" value="5" required>
+                </div>
+            </article>
+            <div class="p-3"></div>
+            <article id="ag6" class=" p-3">
+                <h4>
+                    <b>
+                        22 - Achei que este website tinha muitas inconsistências. *
+                    </b>
+                </h4>
+                <div class="pt-2 pl-4">
+                    <label for = "ag6primeira">1.</label>
+                    <input id="ag6primeira" type="radio" name="a6" value="1"> 
+                    <label for = "ag6segunda">2.</label>
+                    <input id="ag6segunda" type="radio" name="a6" value="2">
+                    <label for = "ag6terceira">3.</label>
+                    <input id="ag6terceira" type="radio" name="a6" value="3">     
+                    <label for = "ag6quarta">4.</label>              
+                    <input id="ag6quarta" type="radio" name="a6" value="4">    
+                    <label for = "ag6quinta">5.</label>
+                    <input id="ag6quinta" type="radio" name="a6" value="5" required>
+                </div>
+            </article>
+            <div class="p-3"></div>
+            <article id="ag7" class=" p-3">
+                <h4>
+                    <b>
+                        23 - Suponho que a maioria das pessoas aprenderia a utilizar rapidamente este website. *
+                    </b>
+                </h4>
+                <div class="pt-2 pl-4">
+                    <label for = "ag7primeira">1.</label>
+                    <input id="ag7primeira" type="radio" name="a7" value="1"> 
+                    <label for = "ag7segunda">2.</label>
+                    <input id="ag7segunda" type="radio" name="a7" value="2">
+                    <label for = "ag7terceira">3.</label>
+                    <input id="ag7terceira" type="radio" name="a7" value="3">    
+                    <label for = "ag7quarta">4.</label>               
+                    <input id="ag7quarta" type="radio" name="a7" value="4"> 
+                    <label for = "ag7quinta">5.</label>   
+                    <input id="ag7quinta" type="radio" name="a7" value="5" required>
+                </div>
+            </article>
+            <div class="p-3"></div>
+            <article id="ag8" class=" p-3">
+                <h4>
+                    <b>
+                        24 - Considerei o website muito complicado de utilizar. *
+                    </b>
+                </h4>
+                <div class="pt-2 pl-4">
+                    <label for = "ag8primeira">1.</label>
+                    <input id="ag8primeira" type="radio" name="a8" value="1"> 
+                    <label for = "ag8segunda">2.</label>
+                    <input id="ag8segunda" type="radio" name="a8" value="2">
+                    <label for = "ag8terceira">3.</label>
+                    <input id="ag8terceira" type="radio" name="a8" value="3">      
+                    <label for = "ag8quarta">4.</label>             
+                    <input id="ag8quarta" type="radio" name="a8" value="4">    
+                    <label for = "ag8quinta">5.</label>
+                    <input id="ag8quinta" type="radio" name="a8" value="5" required>
+                </div>
+            </article>
+            <div class="p-3"></div>
+            <article id="ag9" class=" p-3">
+                <h4>
+                    <b>
+                        25 - Senti-me muito confiante a utilizar este website. *
+                    </b>
+                </h4>
+                <div class="pt-2 pl-4">
+                    <label for = "ag9primeira">1.</label>
+                    <input id="ag9primeira" type="radio" name="a9" value="1"> 
+                    <label for = "ag9segunda">2.</label>
+                    <input id="ag9segunda" type="radio" name="a9" value="2">
+                    <label for = "ag9terceira">3.</label>
+                    <input id="ag9terceira" type="radio" name="a9" value="3">      
+                    <label for = "ag9quarta">4.</label>             
+                    <input id="ag9quarta" type="radio" name="a9" value="4">    
+                    <label for = "ag9quinta">5.</label>
+                    <input id="ag9quinta" type="radio" name="a9" value="5" required>
+                </div>
+            </article>
+            <div class="p-3"></div>
+            <article id="ag10" class=" p-3">
+                <h4>
+                    <b>
+                        26 - Tive que aprender muito antes de conseguir lidar com este website. *
+                    </b>
+                </h4>
+                <div class="pt-2 pl-4">
+                    <label for = "ag10primeira">1.</label>
+                    <input id="ag10primeira" type="radio" name="a10" value="1"> 
+                    <label for = "ag10segunda">2.</label>
+                    <input id="ag10segunda" type="radio" name="a10" value="2">
+                    <label for = "ag10terceira">3.</label>
+                    <input id="ag10terceira" type="radio" name="a10" value="3">  
+                    <label for = "ag10quarta">4.</label>                 
+                    <input id="ag10quarta" type="radio" name="a10" value="4">   
+                    <label for = "ag10quinta">5.</label> 
+                    <input id="ag10quinta" type="radio" name="a10" value="5" required>
+                </div>
+            </article>
+        </fieldset>
+        </div>
+        <div class="p-3"></div>
+        <div id="next">
+            <button type="button">
+                <input id="sub" type="submit" name="submit" value="Submit" class="btn btn-light">
+            </button>
+        </div>
+    </form>
+</section>
+</body>
+<footer>
+    <ul class="nav footer">
+        <li class="nav-item">
+          <a class="nav-link faIcon" href="#"><i class="fab fa-facebook-f"></i></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link faIcon" href="#"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link faIcon" href="#"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link faIcon" href="#"><i class="fab fa-linkedin-in"></i></a>
+        </li>
+        <a class="nav-item ml-auto">All rights reserved</a>            
+      </ul>
+</footer>
+</html>

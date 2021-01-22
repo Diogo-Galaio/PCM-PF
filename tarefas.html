@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head lang="pt">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin ="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@300&display=swap" rel="stylesheet">
+    
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+         <!-- CSS -->
+        <link rel="stylesheet" href="css/main.css">
+    
+        <!--jQuery first, then Popper.js, then Bootstrap JS-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/89c4dad903.js" crossorigin="anonymous"></script>
+    
+        <script src="js/form_manager.js"></script>
+    </head>
+<title>Questionário</title>
+<body class="bg-dark text-light">
+<header id="header"  class="pb-3">
+    <h1 class="ml-3">Tarefas</h1>
+    <p class="ml-3">Por favor, realize as seguintes tarefas e descreva-nos os resultados obtidos.</p>
+</header>
+
+<section id="tarefas"  class="card p-4 m-0 bg-dark">
+    <form name="ftarefas" method="GET" onsubmit="get_form2()" action="avglobal.html">
+        <fieldset>
+            <div id="cartao_avaliacao" class="card p-3">
+                <h2>Tarefa 1 - Explorar o website</h2>
+                <p>
+                    Explore o website livremente durante alguns minutos de modo a ficar mais familiarizado com
+                    as funcionalidades do website.
+                </p>
+            <br>
+            <article id="t1" class="p-3">
+                <h4>
+                        7 - Indique se encontrou algum erro ou se sentiu alguma dificuldade em perceber as
+                        funcionalidades principais do website.
+                </h4>
+                <label for="tarefa1">Resposta: </label>
+                <textarea id="tarefa1" rows="4" cols="50" name="tarefa1" style="border: 1px solid black;"></textarea>
+            </article>
+            </div>
+            <br>
+            <div id="cartao_avaliacao" class="card p-3">
+            <h2>Tarefa 2 - Pesquisar Imagens</h2>
+            <p>
+                Escolha a opção de <b>pesquisa por palavra chave</b>, selecione uma categoria à sua escolha e
+                observe os resultados. Repita a pesquisa com outras categorias.
+            </p>
+            <br>
+            <article id="t2" class="p-3">
+                <h4>
+                        8 - Como classifica os resultados obtidos pela pesquisa por categoria (1 significa “Maus” e 5
+                        significa “Excelentes”)? *
+                </h4>
+
+                <label for = "t2primeira">1.</label>
+                <input id="t2primeira" type="radio" name="t2r" value="1"> 
+
+                <label for = "t2segunda">2.</label>
+                <input id="t2segunda" type="radio" name="t2r" value="2">
+
+                <label for = "t2terceira">3.</label>
+                <input id="t2terceira" type="radio" name="t2r" value="3">
+
+                <label for = "t2quarta">4.</label>                  
+                <input id="t2quarta" type="radio" name="t2r" value="4">  
+                
+                <label for = "t2quinta">5.</label>  
+                <input id="t2quinta" type="radio" name="t2r" value="5" required>
+            </article>
+            <div class="p-3"></div>
+            <article id="t3" class="p-3">
+                <h4>
+                        9 - Que dificuldades encontrou para realizar a pesquisa e visualizar os resultados?
+                </h4>
+
+                <label for="tarefa3">Resposta:</label>
+                <textarea id="tarefa3" rows="4" cols="50" name="tarefa3" style="border: 1px solid black;"></textarea>
+            </article>
+            <div class="p-3"></div><div class="p-3"></div>
+            <p>
+                Escolha a opção de <b>pesquisa por cor dominante</b>, selecione uma cor à sua escolha e observe os
+                resultados. Repita a pesquisa com outras cores.
+            </p>
+
+            <article id="t4" class="p-3">
+                <h4>
+                        10 - Como classifica os resultados obtidos pela pesquisa por cor (1 significa “Maus” e 5
+                        significa “Excelentes”)? *
+                </h4>
+
+                <label for = "t4primeira">1.</label>
+                <input id="t4primeira" type="radio" name="t4r" value="1">
+                <label for = "t4segunda">2.</label> 
+                <input id="t4segunda" type="radio" name="t4r" value="2">
+                <label for = "t4terceira">3.</label>
+                <input id="t4terceira" type="radio" name="t4r" value="3"> 
+                <label for = "t4quarta">4.</label>                  
+                <input id="t4quarta" type="radio" name="t4r" value="4"> 
+                <label for = "t4quinta">5.</label>   
+                <input id="t4quinta" type="radio" name="t4r" value="5" required>
+            </article>
+            <div class="p-3"></div>
+            <article id="t5" class="p-3">
+                <h4>
+                        11 - Que dificuldades encontrou para realizar a pesquisa e visualizar os resultados?
+                </h4>
+
+                <label for="tarefa5">Resposta:</label>
+                <textarea id="tarefa5" rows="4" cols="50" name="tarefa5"  style="border: 1px solid black;"></textarea>        
+            </article>
+            <div class="p-3"></div>
+            <p>
+                Escolha a opção de <b>pesquisa por imagem semelhante</b>, selecione uma imagem à sua escolha e
+                observe os resultados.   
+            </p>
+            <div class="p-3"></div>
+            <article id="t6" class="p-3">
+                <h4>
+                        12 - Como classifica os resultados obtidos pela pesquisa por imagem semelhante (1 significa
+                        “Maus” e 5 significa “Excelentes”)? *
+                </h4>
+
+                <label for = "t6primeira">1.</label>   
+                <input id="t6primeira" type="radio" name="t6r" value="1"> 
+                <label for = "t6segunda">2.</label>  
+                <input id="t6segunda" type="radio" name="t6r" value="2">
+                <label for = "t6terceira">3.</label>  
+                <input id="t6terceira" type="radio" name="t6r" value="3">
+                <label for = "t6quarta">4.</label>                     
+                <input id="t6quarta" type="radio" name="t6r" value="4">
+                <label for = "t6quinta">5.</label>      
+                <input id="t6quinta" type="radio" name="t6r" value="5" required>
+            </article>
+            <div class="p-3"></div>
+            <article id="t7" class="p-3">
+                <h4>
+                        13 - Como classifica a utilidade da pesquisa por Imagens Semelhantes (1 significa “Pouca” e 5
+                        significa “Muita”)? *
+                </h4>
+
+                <label for = "t7primeira">1.</label>   
+                <input id="t7primeira" type="radio" name="t7r" value="1"> 
+                <label for = "t7segunda">2.</label>
+                <input id="t7segunda" type="radio" name="t7r" value="2">
+                <label for = "t7terceira">3.</label>
+                <input id="t7terceira" type="radio" name="t7r" value="3"> 
+                <label for = "t7quarta">4.</label>                  
+                <input id="t7quarta" type="radio" name="t7r" value="4"> 
+                <label for = "t7quinta">5.</label>   
+                <input id="t7quinta" type="radio" name="t7r" value="5" required>
+            </article>
+            <div class="p-3"></div>
+            <article id="t8" class="p-3">
+                <h4>
+                        14 - Que dificuldades encontrou para realizar a pesquisa e visualizar os resultados?
+                </h4>
+
+                <label for="tarefa8">Resposta:</label>
+                <textarea id="tarefa8" rows="4" cols="50" name="tarefa8" style="border: 1px solid black;"></textarea>
+            </article>
+            <div class="p-3"></div>
+            <article id="t9" class="p-3">
+                <h4>
+                        15 - Qual o tipo de pesquisa que acha mais adequado?
+                </h4>
+
+                <label for="tarefa9">Resposta:</label>
+                <textarea id="tarefa9" rows="4" cols="50" name="tarefa9" style="border: 1px solid black;"></textarea>
+            </article>
+        </div>
+        </fieldset>
+        
+        <div id="next">
+            <button type="button">
+                <input id="sub" type="submit" name="submit" value="Next" class="btn btn-light">
+            </button>
+        </div>
+    </form>
+</section>
+
+</body>
+</html>

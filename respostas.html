@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head lang="pt">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/form_manager.js"></script>
+</head>
+<title>Questionário</title>
+<body>
+    <h1>
+        Registos Local Storage.
+    </h1>    
+    <fieldset>
+        <legend>Caracterização</legend>
+        <div>
+            <h5>
+                1. Idade
+            </h5>
+            <canvas id="canvas_idade" class="grafico" height="150"></canvas>
+        </div>
+        <div>
+            <h5>
+                2. Género
+            </h5>
+            <canvas id="canvas_sexo" class="grafico" height="150"></canvas>
+        </div>
+        <div>
+            <h5>
+                3. Frequencia que utiliza a internet:
+            </h5>
+            <div id = "frequencia"></div>
+        </div>
+        <div>
+            <h5>
+                4. Web Browers
+            </h5>
+            <canvas id="canvas_web" class="grafico" height="150" width="400"></canvas>
+        </div>
+        <div>
+            <h5>
+                5. Usa outras apilcações:
+            </h5>
+            <div id = "outras"></div>
+            <p>Quais?<p id="quais"></p></p>
+            <div id = "quais"></div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>
+            Tarefas
+        </legend>
+        <div>
+            <h5>
+                1. Erros e Dificuldades a perceber funcionalidades do website:
+            </h5>
+            <div id = "funcionalidades"></div>
+        </div>
+        <div>
+            <h5>
+                2. Como classifica os resultados obtidos pela pesquisa por categoria:
+            </h5>
+            <div id = "class_dif"></div>
+        </div>
+        <div>
+            <h5>
+                3. Que dificuldades encontrou para realizar a pesquisa e visualizar os resultados?:
+            </h5>
+            <div id = "dificuldades"></div>
+        </div>
+        <div>
+            <h5>
+                4. Como classifica os resultados obtidos pela pesquisa por cor?:
+            </h5>
+            <div id = "cor"></div>
+        </div>
+        <div>
+            <h5>
+                5. Que dificuldades encontrou para realizar a pesquisa e visualizar os resultados?:
+            </h5>
+            <div id = "outras_dif"></div>
+        </div>
+        <div>
+            <h5>
+                6. Como classifica os resultados obtidos pela pesquisa por imagem semelhante?:
+            </h5>
+            <div id = "img1"></div>
+        </div>
+        <div>
+            <h5>
+                7. Como classifica a utilidade da pesquisa por Imagens Semelhantes?:
+            </h5>
+            <div id = "img2"></div>
+        </div>
+        <div>
+            <h5>
+                8.Que dificuldades encontrou para realizar a pesquisa e visualizar os resultados?:
+            </h5>
+            <div id = "class_res"></div>
+        </div>
+        <div>
+            <h5>
+                9.Qual o tipo de pesquisa que acha mais adequado?:
+            </h5>
+            <div id = "tipo"></div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>
+            Avaliação Geral
+        </legend>
+        <div>
+            <h5>1.Para cada par de adjetivos, selecione a opção que melhor descreve a sua experiência de utilização deste website:</h5>
+            <h5>Fantástica - Horrível:</h5>
+            <div id = "a1"></div>
+            <h5>Estimulante - Aborrecida:</h5>
+            <div id = "a2"></div>
+            <h5>Gratificante - Frustrante:</h5>
+            <div id = "a3"></div>
+            <h5>Fácil - Difícil:</h5>
+            <div id = "a4"></div>
+        </div>
+        <div>
+            <h5>2.Responda às perguntas seguintes relativamente á sua experiência:</h5>
+            <h5>Acho que gostaria de utilizar este website com frequência:</h5>
+            <canvas id="canvas_freq" class="grafico" height="150"></canvas>
+        </div>
+        <div>
+            <h5>3.Considerei o website mais complexo do que necessário:</h5>
+            <div id = "l1"></div>
+        </div>
+        <div>
+            <h5>4.Achei o website fácil de utilizar:</h5>
+            <div id = "l2"></div>
+        </div>
+        <div>
+            <h5>5.Acho que necessitaria de ajuda de um técnico para conseguir utilizar este website:</h5>
+            <div id = "l3"></div>
+        </div>
+        <div>
+            <h5>6.Considerei que as várias funcionalidades deste website estavam bem integradas:</h5>
+            <div id = "l4"></div>
+        </div>
+        <div>
+            <h5>7.Achei que este website tinha muitas inconsistências:</h5>
+            <div id = "l5"></div>
+        </div>
+        <div>
+            <h5>8.Suponho que a maioria das pessoas aprenderia a utilizar rapidamente este website:</h5>
+            <div id = "l6"></div>
+        </div>
+        <div>
+            <h5>9.Considerei o website muito complicado de utilizar:</h5>
+            <div id = "l7"></div>
+        </div>
+        <div>
+            <h5>10.Senti-me muito confiante a utilizar este website:</h5>
+            <div id = "l8"></div>
+        </div>
+        <div>
+            <h5>11.Tive que aprender muito antes de conseguir lidar com este website:</h5>
+            <div id = "l9"></div>
+        </div>
+    </fieldset>
+</body>
+<script>get_data_form()</script>
+</html>

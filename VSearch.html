@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="description" content="PCM Final Project - Visual Search">
+    <meta name="keywords" content="HTML5, CSS, JavaScript">
+    <meta name="author" content="Rui Jesus">
+    <meta charset="UTF-8">
+    <title>Visual Search</title>
+    <link rel="stylesheet" href="css/VSearchStyle.css">
+    <script src="js/Image_Processing.js"></script>
+    <script src="js/XML_Database.js"></script>
+    <script src="js/ISearchEngine.js"></script>
+    <script src="js/ISearchEngine_Manager.js"></script>
+</head>
+<body>
+<header id="header1">
+    <input id="search" type="text"  placeholder="Search Images">
+    <button type="button" onclick="sendCategory(document.getElementById('search').value)"> Search </button>
+</header>
+
+<section id="query">
+
+</section>
+
+<section id="tools">
+    <li class="dropdown">
+            <ul>
+                <button id="b1" class="cB" type="button" value="red" onclick="sendColor('red')"></button>
+                <button id="b2" class="cB" type="button" value="orange" onclick="sendColor('orange');"></button>
+                <button id="b3" class="cB" type="button" value="yellow" onclick="sendColor('yellow');"></button>
+                <button id="b4" class="cB" type="button" value="green" onclick="sendColor('green');"></button>
+                <button id="b5" class="cB" type="button" value="Blue-green" onclick="sendColor('Blue-green');"></button>
+                <button id="b6" class="cB" type="button" value="blue" onclick="sendColor('blue');"></button>
+                <button id="b7" class="cB" type="button" value="purple" onclick="sendColor('purple');"></button>
+                <button id="b8" class="cB" type="button" value="pink" onclick="sendColor('pink');"></button>
+                <button id="b9" class="cB" type="button" value="white" onclick="sendColor('white');"></button>
+                <button id="b10" class="cB" type="button" value="grey" onclick="sendColor('grey');"></button>
+                <button id="b11" class="cB" type="button" value="black" onclick="sendColor('black');"></button>
+                <button id="b12" class="cB" type="button" value="brown" onclick="sendColor('brown');"></button>
+                
+                
+                <form name="testes" method="get" action="index.html">
+                    <input id="sub" type="submit" name="submit" value="avaliar Website">
+                </form>
+        </ul>
+    </li>
+</section>
+
+<section id="visualizacao"  >
+    <canvas id="canvas" width="1100" height="1100">
+        Your browser doesn't recognize the canvas element
+    </canvas>
+</section>
+
+
+
+<script>
+    function sendCategory(category) {
+        for(let i=0; i<window.localStorage.length;i++){
+            if(window.localStorage.key(i)==="colorsearch")window.localStorage.removeItem(window.localStorage.key(i));
+        }
+        window.localStorage.setItem("category",category);
+        location.reload();
+    }
+    function sendColor(color) {
+        window.localStorage.setItem("colorsearch",color);
+        location.reload();
+
+    }
+
+    window.onload = main();
+</script>
+
+</body>
+</html>
+
